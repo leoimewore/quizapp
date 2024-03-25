@@ -7,16 +7,6 @@ import { useEffect } from "react"
 
 const Home = () => {
 
- 
-
-
-
- 
-  
- 
-
-
-
   return (
     <section className='w-full flex-center flex-col'>
         <div className='flex flex-col'>

@@ -11,7 +11,6 @@ const Result = () => {
     const router=useRouter()
 
     const handleStart=()=>{
-        localStorage.clear();
         setShowSubjectName(false)
         // setIdx(0)
         // setScore(0)
