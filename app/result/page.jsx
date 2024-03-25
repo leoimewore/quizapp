@@ -1,5 +1,5 @@
 "use client"
-import { useDataStore } from "@app/Context/app-data";
+import { useDataStore } from "@Context/app-data";
 import Image from "next/image"
 import { useRouter } from 'next/navigation';
 import { useEffect } from "react";

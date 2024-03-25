@@ -1,5 +1,5 @@
 "use client";
-import { useDataStore } from "@app/Context/app-data";
+import { useDataStore } from "@Context/app-data";
 import { useEffect } from "react";
 import list from "@public/assets/data.json";
 import AnswerTab from "@components/AnswerTab";

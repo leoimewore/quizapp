@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react';
-import { useDataStore } from "@app/Context/app-data";
+import { useDataStore } from "@Context/app-data";
 
 const Slider = () => {
 

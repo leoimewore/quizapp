@@ -1,7 +1,7 @@
 "use client"
 import cx from "classnames"
 import Image from "next/image"
-import { useDataStore } from "@app/Context/app-data"
+import { useDataStore } from "@Context/app-data"
 import Jsimage from "./jsImage"
 import { useEffect } from "react"
 

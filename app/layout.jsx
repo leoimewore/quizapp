@@ -1,6 +1,6 @@
 import "@styles/globals.css";
 import Toggle from "@components/Toggle"; 
-import { DataStore } from "./Context/app-data";
+import { DataStore } from "../Context/app-data";
 
 
 export const metadata ={
