@@ -22,34 +22,29 @@ export const DataStore = ({ children }) => {
 
     
 
-    const [testName,setTestName]=useState(()=>{
-        let storedTestName=localStorage.getItem("test")
-
-        return storedTestName || ""
-    })
+    const [testName,setTestName]=useState(
+        ""
+    )
     const [data,setData]=useState(list[0].quizzes)
-    const [idx,setIdx]=useState((JSON.parse(localStorage.getItem("idx")))||0)
-    const [showSubjectName,setShowSubjectName]= useState(localStorage.getItem("showtoggleInfo") ||false)
+    const [idx,setIdx]=useState(0)
+    const [showSubjectName,setShowSubjectName]= useState(false)
     const [testQuestion, setTestQuestion] = useState("")
     const [options, setOptions] = useState([])
-    const [answer, setAnswer] = useState(localStorage.getItem("answer")||"")
-    const [clicked, setClicked] = useState(JSON.parse(localStorage.getItem("clicked")) || false)
-    const [selected, setSelected] = useState(JSON.parse(localStorage.getItem("selected"))||"")
-    const [checked,setChecked]=useState(JSON.parse(localStorage.getItem("checked")) ||false)
-    const [correct, setCorrect] = useState( JSON.parse(localStorage.getItem("correct"))||"")
-    const [inCorrect, setInCorrect] = useState( JSON.parse(localStorage.getItem("inCorrect"))||"")
-    const [questionData, setQuestionData] = useState(()=>{
-        const storeddata=localStorage.getItem("questions")
-
-       return JSON.parse(storeddata) || {question:"",
+    const [answer, setAnswer] = useState("")
+    const [clicked, setClicked] = useState(false)
+    const [selected, setSelected] = useState("")
+    const [checked,setChecked]=useState(false)
+    const [correct, setCorrect] = useState("")
+    const [inCorrect, setInCorrect] = useState("")
+    const [questionData, setQuestionData] = useState(
+         {question:"",
         multiChoiceOptions:[],
         answer:""
-    } 
     })
-    const [submitClicked, setSubmitClicked] = useState(JSON.parse(localStorage.getItem("submit"))|| false)
-    const [error,setError]=useState( JSON.parse(localStorage.getItem("error"))||false)
+    const [submitClicked, setSubmitClicked] = useState(false)
+    const [error,setError]=useState(false)
     const [disabled, setDisabled] = useState(false);
-    const [score,setScore]=useState(JSON.parse(localStorage.getItem("score"))||0)
+    const [score,setScore]=useState(0)
 
 
     const incIdx=()=>{

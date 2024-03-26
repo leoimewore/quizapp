@@ -17,6 +17,7 @@ const TestPage = () => {
   const { testName,
           data,
           idx,
+          setIdx,
           error, 
           setError,
           setCorrect,
@@ -185,6 +186,31 @@ useEffect(() => {
 
   
 }, [clicked])
+
+
+useEffect(() => {
+  setClicked(JSON.parse(localStorage.getItem("clicked")))
+}, [])
+
+useEffect(()=>{
+
+  setCorrect(JSON.parse(localStorage.getItem("correct")))
+
+},[])
+
+useEffect(() => {
+  setInCorrect(JSON.parse(localStorage.getItem("inCorrect")))
+}, [])
+
+useEffect(() => {
+  const storeddata=localStorage.getItem("questions")
+
+  setQuestionData(JSON.parse(storeddata))
+  
+}, [])
+
+
+
  
 
 
@@ -211,6 +237,31 @@ useEffect(() => {
       window.removeEventListener('popstate', disableBackNavigation);
     };
   }, []);
+
+
+  useEffect(() => {
+
+    setIdx((JSON.parse(localStorage.getItem("idx"))))
+    
+  }, [])
+
+  useEffect(() => {
+   setChecked(JSON.parse(localStorage.getItem("checked")))
+  }, [])
+
+  useEffect(() => {
+   setSubmitClicked(JSON.parse(localStorage.getItem("submit")))
+  }, [])
+
+  useEffect(()=>{
+    setError(JSON.parse(localStorage.getItem("error")))
+  },[])
+
+ 
+  
+  
+  
+  
   
 
   

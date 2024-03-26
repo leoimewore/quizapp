@@ -23,6 +23,10 @@ const Result = () => {
     useEffect(() => {
       localStorage.setItem("score", JSON.stringify(score))
     }, [score])
+
+    useEffect(() => {
+      setScore(JSON.parse(localStorage.getItem("score")))
+    }, [])
     
   return (
     <section className='w-full flex-center flex-col'>

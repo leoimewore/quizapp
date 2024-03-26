@@ -39,6 +39,16 @@ const AnswerTab = ({option,index}) => {
     
     }, [selected])
 
+    useEffect(() => {
+      setAnswer(localStorage.getItem("answer"))
+    }, [])
+
+    useEffect(() => {
+      setSelected(JSON.parse(localStorage.getItem("selected")))
+    }, [])
+    
+    
+
     
 
     

@@ -7,7 +7,7 @@ import { useEffect } from "react"
 
 const Toggle = ({rounded =false}) => {
 
-    const{testName,showSubjectName,setShowSubjectName,data}=useDataStore()
+    const{testName,showSubjectName,setShowSubjectName,setTestName}=useDataStore()
 
 
     // useEffect(() => {
@@ -28,6 +28,17 @@ const Toggle = ({rounded =false}) => {
         localStorage.setItem("test",testName)
       
       }, [testName])
+
+      useEffect(() => {
+       setShowSubjectName(localStorage.getItem("showtoggleInfo"))
+      }, [])
+
+      useEffect(() => {
+        let storedTestName=localStorage.getItem("test")
+        setTestName(storedTestName)
+      }, [])
+      
+      
     
     
 
